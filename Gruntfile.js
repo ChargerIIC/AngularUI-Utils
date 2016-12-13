@@ -35,7 +35,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-targethtml');
   grunt.loadNpmTasks('grunt-karma');
-  grunt.registerTask('dist', ['karma', 'concat', 'targethtml', 'copy']);
-  gulp.task("default", function (cb) {
-  runSequence('dist', ['karma', 'concat', 'targethtml', 'copy'])});
-};
+  grunt.registerTask('default', ['karma', 'concat', 'targethtml', 'copy']);
+}
