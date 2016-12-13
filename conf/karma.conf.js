@@ -9,6 +9,6 @@ module.exports = function(config){
     ],
     autoWatch : true,
     frameworks: ['jasmine'],
-    browsers : ['Chrome'],
-    plugins : ['karma-chrome-launcher', 'karma-jasmine']
+    browsers : ['Firefox'],
+    plugins : ['karma-firefox-launcher', 'karma-jasmine']
 })};
