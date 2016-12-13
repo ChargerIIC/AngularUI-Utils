@@ -1,8 +1,11 @@
 language: node_js
 node_js:
-  - "6.1"
+  - "6"
 
 before_script:
-  - npm install grunt
+  - bower install
+  - karma start --browsers=Firefox test/karma.conf.js --single-run=true
+
 script:
+  - grunt
   - grunt build
