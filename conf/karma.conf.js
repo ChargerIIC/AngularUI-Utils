@@ -2,8 +2,8 @@ module.exports = function(config){
     config.set({
     basePath : '../',
     files : [
-      '/bower_components/angular/angular.js',
-      '/bower_components/angular-mocks/angular-mocks.js',
+      'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.22/angular.js',
+      'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.22/angular-mocks.js',
       'src/js/**/*.js',
       'test/unit/**/*.js'
     ],
