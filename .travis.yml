@@ -3,7 +3,7 @@ node_js:
   - "6"
 
 before_script:
-  - karma start --browsers=Firefox test/karma.conf.js --single-run=true
+  - karma start --browsers=Firefox conf/karma.conf.js --single-run=true
 
 script:
   - grunt
