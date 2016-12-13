@@ -3,7 +3,6 @@ node_js:
   - "6"
 
 before_script:
-  - bower install
   - karma start --browsers=Firefox test/karma.conf.js --single-run=true
 
 script:
