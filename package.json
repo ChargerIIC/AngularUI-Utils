@@ -1,0 +1,34 @@
+{
+  "name": "angularui-utils",
+  "version": "1.0.0",
+  "description": "Tutorial progession in AngularUI book",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChargerIIC/AngularUI-Utils.git"
+  },
+  "author": "ChargerIIC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChargerIIC/AngularUI-Utils/issues"
+  },
+  "homepage": "https://github.com/ChargerIIC/AngularUI-Utils#readme",
+  "devDependencies": {
+  "grunt": "~0.4.5",
+  "grunt-contrib-concat": "~0.5.0",
+  "grunt-contrib-copy": "~0.5.0",
+  "grunt-karma": "~0.8.3",
+  "grunt-protractor-runner": "^1.1.0",
+  "grunt-targethtml": "~0.2.6",
+  "karma": "~0.12.0",
+  "karma-chrome-launcher": "~0.1.4",
+  "karma-firefox-launcher": "~0.1.3",
+  "karma-jasmine": "~0.1.5"
+}
+
+}

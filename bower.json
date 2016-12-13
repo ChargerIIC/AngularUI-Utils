@@ -1,0 +1,23 @@
+{
+  "name": "angularui-utils",
+  "description": "Tutorial progession in AngularUI book",
+  "main": "index.js",
+  "authors": [
+    "ChargerIIC"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ChargerIIC/AngularUI-Utils",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.22",
+    "angular-mocks": "~1.2.22",
+    "bootstrap": "~3.2.0"
+  }
+}
