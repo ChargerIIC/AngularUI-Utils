@@ -29,5 +29,12 @@ angular.module('myApp.controllers', []).controller('helloWorldCtrl', function ($
     console.log($event);
     $scope.helpText = "Easy. Just enter your name."; //I know its a sample, but that is terrible help text
     $timeout(function() { $scope.helpText = "" }, 10000);
-};
-});
+    };
+
+    $scope.tooltip = function() {
+        if(!$scope.person.hasOwnProperty("phone")) {
+            return $scope.person.firstName + " has no phone?"
+        }
+        else { return "All good."}
+    }
+  });

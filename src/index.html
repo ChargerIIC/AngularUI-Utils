@@ -25,13 +25,16 @@
         <div class="col-xs-2"></div>
         <div class="col-xs-8">{{ helpText }}</div>
       </div>
-      <div class="row spacer-lg">
-          <pre ng-style="modelStatus()" class="col-xs-12"><code>{{ getModel() }}</code></pre>
+      <div original-title="{{ tooltip() }}" ui-jq="tooltip" class="row spacer-lg">
+        <pre ng-style="modelStatus()" class="col-xs-12">
+        <code>{{ getModel() }}</code></pre>
       </div>
   </div>
 <!--(if target dev)><!-->
+<script src="../bower_components/jquery/dist/jquery.js"></script>
 <script src="../bower_components/angular/angular.js"></script>
 <script src="js/vendor/ui-utils.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="js/app.js"></script>
 <script src="js/controllers.js"></script>
 <script src="js/directives.js"></script>
