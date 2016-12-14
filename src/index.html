@@ -22,8 +22,9 @@
           <input class="col-xs-7" type="tel" id="phone" ui-mask="{{ mask }}" ng-model="person.phone" ui-event="{ focus: 'focusCallback()', blur : 'blurCallback()' }" >
       </div>
       <div class="row spacer-lg">
-          <pre class="col-xs-12"><code>{{ getModel() }}</code></pre>
+          <pre ng-style="modelStatus()" class="col-xs-12"><code>{{ getModel() }}</code></pre>
       </div>
+      <div>{{ helpText }}</div>
   </div>
 <!--(if target dev)><!-->
 <script src="../bower_components/angular/angular.js"></script>
