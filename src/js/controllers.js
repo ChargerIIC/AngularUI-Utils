@@ -1,5 +1,29 @@
 'use strict';
-angular.module('myApp.controllers', []).controller('helloWorldCtrl', function ($scope, $timeout) {
+angular.module('myApp.controllers', [])
+.controller('MapCtrl', function ($scope, $timeout) {
+  $scope.myMarkers = [];
+
+    $scope.mapOptions = {
+        center: new google.maps.LatLng(37.782,-122.418),
+        zoom: 4,
+        mapTypeId: google.maps.MapTypeId.SATELLITE
+    };
+
+    var cloudLayer = new google.maps.weather.CloudLayer();
+    $timeout(function(){
+        cloudLayer.setMap($scope.myMap);
+    }, 1000);
+
+    $scope.addMarker = function($event, $params) {
+        $scope.myMarkers.push(new google.maps.Marker({
+            map: $scope.myMap,
+            position: $params[0].latLng
+        }));
+    };
+    $scope.eventBinding = {'map-click':
+       'addMarker($event, $params)'};    
+})
+.controller('helloWorldCtrl', function ($scope, $timeout) {
     $scope.person = {
         firstName: "Jane",
         lastName: "Doe",
@@ -26,9 +50,9 @@ angular.module('myApp.controllers', []).controller('helloWorldCtrl', function ($
     };
 
     $scope.helpKeyDown = function($event) {
-    console.log($event);
-    $scope.helpText = "Easy. Just enter your name."; //I know its a sample, but that is terrible help text
-    $timeout(function() { $scope.helpText = "" }, 10000);
+      console.log($event);
+      $scope.helpText = "Easy. Just enter your name."; //I know its a sample, but that is terrible help text
+      $timeout(function() { $scope.helpText = "" }, 10000);
     };
 
     $scope.tooltip = function() {
