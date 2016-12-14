@@ -2,7 +2,8 @@
 angular.module('myApp.controllers', []).controller('helloWorldCtrl', function ($scope) {
     $scope.person = {
         firstName: "Jane",
-        lastName: "Doe"
+        lastName: "Doe",
+        // phone:'(999) 999-9999'
     };
     $scope.mask = "(999) 999-9999 ext 99";
     $scope.getModel = function () {
