@@ -14,6 +14,6 @@ describe('controller specs', function() {
   });
 
   it('should create "person" model with last name "Doe"', function() {
-    expect($scope.person.firstName).toBe('Doe');
+    expect($scope.person.lastName).toBe('Doe');
   });
 });
