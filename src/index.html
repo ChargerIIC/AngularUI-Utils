@@ -11,15 +11,15 @@
   <div class="container" ng-controller="helloWorldCtrl">
       <div class="row spacer-sm">
           <label class="col-xs-5 text-right" for="fname">First Name</label>
-          <input class="col-xs-7" type="text" id="fname" ng-model="person.firstName">
+          <input class="col-xs-7" type="text" id="fname" ng-model="person.firstName" ui-event="{ focus: 'focusCallback()', blur : 'blurCallback()' }" >
       </div>
       <div class="row spacer-sm">
           <label class="col-xs-5 text-right" for="lname">Last Name</label>
-          <input class="col-xs-7" type="text" id="lname" ng-model="person.lastName">
+          <input class="col-xs-7" type="text" id="lname" ng-model="person.lastName" ui-event="{ focus: 'focusCallback()', blur : 'blurCallback()' }" >
       </div>
       <div class="row spacer-sm">
           <label class="col-xs-5 text-right" for="phone">Phone</label>
-          <input class="col-xs-7" type="tel" id="phone" ui-mask="{{ mask }}" ng-model="person.phone">
+          <input class="col-xs-7" type="tel" id="phone" ui-mask="{{ mask }}" ng-model="person.phone" ui-event="{ focus: 'focusCallback()', blur : 'blurCallback()' }" >
       </div>
       <div class="row spacer-lg">
           <pre class="col-xs-12"><code>{{ getModel() }}</code></pre>
@@ -33,7 +33,7 @@
 <script src="js/directives.js"></script>
 <!--<!(endif)-->
 <!--(if target dist)><!-->
-<script src="js/angularui-utils.js"></script>
+<!-- <script src="js/angularui-utils.js"></script> -->
 <!--<!(endif)-->
 </body>
 </html>
