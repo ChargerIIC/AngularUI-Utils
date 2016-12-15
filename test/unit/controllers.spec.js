@@ -1,6 +1,7 @@
 'use strict';
+var $scope;
+
 describe('controller specs', function () {
-    var $scope;
     beforeEach(module('myApp.controllers'));
 
     beforeEach(inject(function ($rootScope, $controller) {
