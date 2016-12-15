@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('myApp', ['myApp.controllers', 'myApp.filters', 'myApp.services', 'ng-grid']);
+angular.module('myApp', ['ui.grid','myApp.controllers', 'myApp.filters', 'myApp.services']);
