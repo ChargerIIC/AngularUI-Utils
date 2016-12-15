@@ -11,11 +11,21 @@
 <body ng-app="myApp">
 
 <div ng-controller="NgGridCtrl">
-    <div class="gridStyle" ui-grid="gridOptions"></div>
+  <div class="gridStyle" ui-grid="gridOptions"></div>
+  <div class="gridStyle" ng-repeat="item in selection">
+      <h1>{{ item.decade}}: {{ item.lang }}</h1>
+      <p>{{ item.lang }} was created in {{ item.year }}.
+         {{ item.comment }}</p>
+      <label for="comment-{{ $index }}">Details:
+      <textarea id="comment-{{ $index }}"
+       ng-model="item.comment" rows="3"></textarea>
+      </label>
+  </div>
 </div>
 
 <!--(if target dev)><!-->
 <script src="../bower_components/jquery/jquery.js"></script>
+<script src="../bower_components/jquery-ui/jquery-ui.js"></script>
 <script src="../bower_components/angular/angular.js"></script>
 <script src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>
 <script src="js/services.js"></script>
