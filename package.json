@@ -1,0 +1,25 @@
+{
+  "name": "angularui-utils",
+  "version": "1.0.0",
+  "description": "Angular UI Tutorial from book",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^1.2.0",
+    "karma": "^0.12.37"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChargerIIC/AngularUI-Utils.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChargerIIC/AngularUI-Utils/issues"
+  },
+  "homepage": "https://github.com/ChargerIIC/AngularUI-Utils#readme"
+}
