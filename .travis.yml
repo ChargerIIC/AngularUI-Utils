@@ -11,6 +11,6 @@ before_script:
   - npm install -g grunt
   - npm install -g bower
   - bower install
-  
+
 script:
-  - grunt
+  - grunt dist
