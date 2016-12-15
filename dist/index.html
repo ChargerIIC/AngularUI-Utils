@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Angular UI Template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    
+    
+    <link rel="stylesheet" href="css/fullcalendar.css">
+    
+</head>
+<body data-ng-app="myApp">
+  <div ng-controller="CalCtrl">
+    <div ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
+    <div class="cal-entry" ng-repeat="event in events">
+        <div class="delete" ng-click="remove()">X</div>
+        <div>{{ event.start | moment }}</div>
+        <div>{{ event | duration }}</div>
+        <input ng-model="event.title" />
+    </div>
+</div>
+  <section id="map" ng-controller="MapCtrl">
+    <div ui-map="myMap" ui-options="mapOptions" class="map-canvas" ui-event="eventBinding"></div>
+  </section>
+  <div class="marker" ng-repeat="marker in myMarkers" ng-click="myMap.panTo(marker.getPosition())">
+       Lat: {{ marker.getPosition().lat() }} <br />
+       Lng: {{ marker.getPosition().lng() }}
+  </div>
+  <div class="container" ng-controller="helloWorldCtrl">
+      <div class="row spacer-sm">
+          <label class="col-xs-5 text-right" for="fname">First Name</label>
+          <input class="col-xs-7" type="text" id="fname" ng-model="person.firstName" ui-event="{ focus: 'focusCallback()', blur : 'blurCallback()' }" ui-keydown="{112:'helpKeyDown($event)'}">
+      </div>
+      <div class="row spacer-sm">
+          <label class="col-xs-5 text-right" for="lname">Last Name</label>
+          <input class="col-xs-7" type="text" id="lname" ng-model="person.lastName" ui-event="{ focus: 'focusCallback()', blur : 'blurCallback()' }" ui-keydown="{112:'helpKeyDown($event)'}">
+      </div>
+      <div class="row spacer-sm">
+          <label class="col-xs-5 text-right" for="phone">Phone</label>
+          <input class="col-xs-7" type="tel" id="phone" ui-mask="{{ mask }}" ng-model="person.phone" ui-event="{ focus: 'focusCallback()', blur : 'blurCallback()' }" ui-keydown="{112:'helpKeyDown($event)'}">
+      </div>
+      <div class="row spacer-lg" ng-show="helpText">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8">{{ helpText }}</div>
+      </div>
+      <div original-title="{{ tooltip() }}" ui-jq="tooltip" class="row spacer-lg">
+        <pre ng-style="modelStatus()" class="col-xs-12">
+        <code>{{ getModel() }}</code></pre>
+      </div>
+  </div>
+
+
+<script src="js/angularui-utils.js"></script>
+
+</body>
+</html>

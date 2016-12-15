@@ -6,15 +6,23 @@
     <title>Angular UI Template</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
+    <!--(if target dev)><!-->
+    <link rel="stylesheet" href="../bower_components/fullcalendar/dist/fullcalendar.css">
+    <!--<!(endif)-->
+    <!--(if target dist)>
+    <link rel="stylesheet" href="css/fullcalendar.css">
+    <!(endif)-->
 </head>
 <body data-ng-app="myApp">
-  <section id="map" ng-controller="MapCtrl">
-    <div ui-map="myMap" ui-options="mapOptions" class="map-canvas" ui-event="eventBinding"></div>
-  </section>
-  <div class="marker" ng-repeat="marker in myMarkers" ng-click="myMap.panTo(marker.getPosition())">
-       Lat: {{ marker.getPosition().lat() }} <br />
-       Lng: {{ marker.getPosition().lng() }}
-  </div>
+  <div ng-controller="CalCtrl">
+    <div ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
+    <div class="cal-entry" ng-repeat="event in events">
+        <div class="delete" ng-click="remove()">X</div>
+        <div>{{ event.start | moment }}</div>
+        <div>{{ event | duration }}</div>
+        <input ng-model="event.title" />
+    </div>
+</div>
   <div class="container" ng-controller="helloWorldCtrl">
       <div class="row spacer-sm">
           <label class="col-xs-5 text-right" for="fname">First Name</label>
@@ -39,18 +47,21 @@
   </div>
 <!--(if target dev)><!-->
 <script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="../bower_components/moment/moment.js"></script>
+<!-- <script src="../bower_components/jquery/dist/jquery-ui.js"></script> -->
+<script src="../bower_components/fullcalendar/dist/fullcalendar.js"></script>
 <script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-ui-calendar/src/calendar.js"></script>
 <script src="../bower_components/angular-ui-utils/ui-utils.js "></script>
-<script src="../bower_components/angular-ui-map/ui-map.js"></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=onGoogleReady&key=AIzaSyDIBA1U5lfaU5lamFoCoa5GqS9wragFiHA"></script>
-<script src="js/vendor/ui-utils.js"></script>
-<script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="js/app.js"></script>
 <script src="js/controllers.js"></script>
 <script src="js/directives.js"></script>
+<script src="js/app.js"></script>
+<script src="js/vendor/ui-utils.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <!--<!(endif)-->
 <!--(if target dist)>
 <script src="js/angularui-utils.js"></script>
 <!(endif)-->
+<script src="js/filters.js"></script>
 </body>
 </html>
