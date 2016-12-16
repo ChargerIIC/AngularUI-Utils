@@ -6,7 +6,7 @@ module.exports = function (grunt) {
             dist: {
                 src: [ '../bower_components/jquery/jquery.js',
                     '../bower_components/angular/angular.js',
-                    '../bower_components/ng-grid/ng-grid-2.0.7.debug.js',
+                    //'../bower_components/ng-grid/ng-grid-2.0.7.debug.js',
                     'src/js/app.js', 'src/js/controllers.js', 'src/js/filters.js' ],
                 dest: 'dist/js/<%= pkg.name %>.js'
             }
@@ -15,7 +15,7 @@ module.exports = function (grunt) {
             main: {
                 files: [
                     { expand: true, cwd: 'src/css/', src: ['**'], dest: 'dist/css/' },
-                    { expand: true, cwd: 'src/bower_components/fullcalendar/', src: ['*.css'], dest: 'dist/css/' }
+                    { expand: true, cwd: '../bower_components/dist/fullcalendar/', src: ['*.css'], dest: 'dist/css/' }
                 ]
             }
         },

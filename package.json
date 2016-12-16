@@ -2,7 +2,23 @@
   "name": "angularui-utils",
   "version": "1.0.0",
   "description": "Angular UI Tutorial from book",
-  "main": "index.js",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChargerIIC/AngularUI-Utils.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChargerIIC/AngularUI-Utils/issues"
+  },
+  "homepage": "https://github.com/ChargerIIC/AngularUI-Utils#readme",
+  "directories": {
+    "test": "test"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-cli": "^1.2.0",
@@ -16,17 +32,14 @@
     "karma-firefox-launcher": "^1.0.0",
     "karma-jasmine": "^1.1.0"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ChargerIIC/AngularUI-Utils.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ChargerIIC/AngularUI-Utils/issues"
-  },
-  "homepage": "https://github.com/ChargerIIC/AngularUI-Utils#readme"
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^1.2.0",
+    "grunt-targethtml": "^0.2.6",
+    "jasmine": "^2.5.2",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma": "^1.3.0",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.1.0"
+  }
 }
