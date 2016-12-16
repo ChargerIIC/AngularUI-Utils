@@ -7,10 +7,13 @@ angular.module('myApp.controllers', ['myApp.filters'])
         ];
         $scope.inputText = "";
         $scope.addItem = function () {
-            $scope.items.push({
-                text: $scope.inputText,
-                completed: false
-            });
-            $scope.inputText = "";
+          var arrTodos = $scope.inputText.split(',');
+          for(var i = 0; i < arrTodos.length; i++) {
+               $scope.items.push({
+                   text: arrTodos[i],
+                   completed: false
+               });
+           }
+          $scope.inputText = "";
         };
-    }]);
+}]);
