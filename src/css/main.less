@@ -29,3 +29,11 @@ body {
   -ms-animation: lightSpeedOut @leave;
   animation: lightSpeedOut @leave;
 }
+
+.item.ng-enter-stagger,.item.ng-leave-stagger,.item.ng-move-stagger {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+
+  -webkit-transition-duration:0;
+  transition-duration:0;
+}
