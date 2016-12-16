@@ -2,9 +2,9 @@ module.exports = function (config) {
     config.set({
         basePath: '../',
         files: [
-            'src/bower_components/jquery/jquery.js',
-            'src/bower_components/angular/angular.js',
-            'src/bower_components/angular-mocks/angular-mocks.js',
+            'bower_components/jquery/jquery.js',
+            'bower_components/angular/angular.js',
+            'bower_components/angular-mocks/angular-mocks.js',
             'src/js/app.js',
             'src/js/controllers.js',
             'src/js/filters.js',
@@ -12,7 +12,7 @@ module.exports = function (config) {
         ],
         autoWatch: true,
         frameworks: ['jasmine'],
-        browsers: ['Chrome'],
-        plugins: ['karma-chrome-launcher', 'karma-jasmine']
+        browsers: ['Firefox'],
+        plugins: ['karma-firefox-launcher', 'karma-jasmine']
     })
 };
