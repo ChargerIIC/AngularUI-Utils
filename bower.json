@@ -1,0 +1,21 @@
+{
+  "name": "AngularUI-Utils",
+  "homepage": "https://github.com/ChargerIIC/AngularUI-Utils",
+  "authors": [
+    "ChargerIIC <ChargerIIC@Yahoo.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.0.3"
+  }
+}
