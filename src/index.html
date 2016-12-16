@@ -7,14 +7,13 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body ng-app="myApp">
+<div ng-controller="NgAnimateCtrl">
   <input ng-model="inputText" />
     <button ng-click="addItem()">add</button>
 
     <div class="item" ng-repeat="item in items | active"><input type="checkbox" ng-model="item.completed" />
         <span ng-bind="item.text"></span>
     </div>
-<div ng-controller="NgAnimateCtrl">
-
 </div>
 
 <!--(if target dev)><!-->
