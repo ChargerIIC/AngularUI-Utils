@@ -1,1 +1,2 @@
-angular.module('myApp', ['myApp.directives']);
+'use strict';
+angular.module('myApp', ['googlechart', 'myApp.controllers']);
