@@ -6,7 +6,7 @@ module.exports = function (grunt) {
             dist: {
                 src: [ 'src/bower_components/jquery/jquery.js',
                     'src/bower_components/angular/angular.js',
-                    'src/bower_components/ng-grid/ng-grid-2.0.7.debug.js',
+                    //'src/bower_components/ng-grid/ng-grid-2.0.7.debug.js',
                     'src/js/app.js', 'src/js/controllers.js', 'src/js/filters.js' ],
                 dest: 'dist/js/<%= pkg.name %>.js'
             }
