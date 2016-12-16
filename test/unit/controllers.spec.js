@@ -1,10 +1,12 @@
 'use strict';
+
+var scope;
+
 describe('controller specs', function () {
-    var $scope;
     beforeEach(module('myApp.controllers'));
 
     beforeEach(inject(function ($rootScope, $controller) {
-        $scope = $rootScope.$new();
+        scope = $rootScope.$new();
     }));
 
     it("should contain 'Test'", function () {
