@@ -1,2 +1,2 @@
 'use strict';
-angular.module('myApp', ['googlechart', 'myApp.controllers']);
+angular.module('myApp', ['kendo.directives', 'myApp.controllers']);

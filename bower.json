@@ -16,9 +16,13 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.0.3",
+    "bootstrap": "^3.3.7",
     "fullcalendar": "^3.1.0",
     "angular": "^1.6.0",
-    "angular-google-chart": "^0.1.0"
+    "angular-google-chart": "^0.1.0",
+    "underscore": "^1.8.3",
+    "d3": "^4.4.0",
+    "nvd3": "^1.8.5",
+    "angularjs-nvd3-directives": "^0.0.7"
   }
 }
