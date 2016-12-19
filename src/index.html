@@ -58,8 +58,72 @@
         </div>
         <div class="col-xs-8 col-xs-offset-4 col-sm-8 col-sm-offset-4 col-md-9 col-md-offset-3 main">
           <tabset>
-           <tab heading="Projects Overview">Project Details not Found.</tab>
-           <tab heading="Issues">Issues not Found.</tab>
+           <tab heading="Projects Overview">
+             <div class="row">
+               <div class="col-xs-6">
+                 <div class="panel panel-default">
+                   <div class="panel-heading">
+                     <span class="glyphicon glyphicon-bullhorn"></span> <b>Issue Tracking</b>
+                   </div>
+                   <ul class="list-group">
+                     <li class="list-group-item">
+                       <span class="label label-danger">Defect</span> 1168 open / 6313
+                     </li>
+                     <li class="list-group-item">
+                       <span class="label label-success">Feature</span> 2729 open / 5089
+                     </li>
+                     <li class="list-group-item"><span class="label label-warning">Patch</span> 409 open / 1848</li>
+                   </ul>
+                 </div>
+               </div>
+               <div class="col-xs-6">
+                 <div class="panel panel-default">
+                   <div class="panel-heading">
+                     <span class="glyphicon glyphicon-user"></span>
+                     <b> Top Developers</b>
+                   </div>
+                   <table class="table">
+                     <tr>
+                       <td class="text-center"><a href="#/user/1">Sai Padamati</a></td>
+                       <td class="text-center"><a href="#/user/2">Akshay Ravindranath</a></td>
+                     </tr>
+                     <tr>
+                       <td class="text-center"><a href="#/user/3">Dipti Kadge</a></td>
+                       <td class="text-center"><a href="#/user/4">Santosh Badge</a></td>
+                     </tr>
+                     <tr>
+                       <td class="text-center"><a href="#/user/5">Shripad Joshi</a></td>
+                       <td class="text-center"><a href="#/user/6">Abshishek Kulkarni</a></td>
+                     </tr>
+                   </table>
+                 </div>
+               </div>
+             </div>
+           </tab>
+           <tab heading="Issues">
+             <div class="row">
+                <div class="col-xs-12">
+                  <h4>Activity</h4>
+                  <table class="table">
+                    <tr>
+                      <td class="col-sm-1"><span class="glyphicon glyphicon-file"></span><span class="text-muted">21:24</span></td>
+                      <td class="col-sm-4"><span class='label label-danger'>#1134</span> OAUTH is not functional</td>
+                      <td class="col-sm-6"><small class='text-muted'>The backend service throws an XML error even though credentials are valid. Sometimes authenticates with wrong password.</small></td>
+                    </tr>
+                    <tr>
+                      <td class="col-sm-1"><span class="glyphicon glyphicon-file"></span><span class="text-muted">18:24</span></td>
+                      <td class="col-sm-4"><span class='label label-danger'>#1078</span> Popup design issue in IE</td>
+                      <td class="col-sm-6"><small class='text-muted'>It is not properly center align and also the backdrop is pitch dark unlike Chrome and FF.</small></td>
+                    </tr>
+                    <tr>
+                      <td class="col-sm-1"><span class="glyphicon glyphicon-file"></span><span class="text-muted">13:24</span></td>
+                      <td class="col-sm-4"><span class='label label-success'>#2690</span> Dictionary service implementation</td>
+                      <td class="col-sm-6"><small class='text-muted'>We've integrated Google Translate service to improve dictionary lookup</small></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+           </tab>
          </tabset>
         </div>
       </div>
